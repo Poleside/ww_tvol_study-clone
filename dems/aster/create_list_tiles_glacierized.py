@@ -24,7 +24,7 @@ def write_csv(list_tiles,list_area,list_tot,out_csv):
 
 def main(in_shp,out_csv):
 
-    geomcol = read_geom_from_shp(in_shp)
+    geomcol, p = read_geom_from_shp(in_shp)
     extent_geom = convhull_of_geomcol(geomcol)
 
     print('Calculating intersection of shapefile extent with all tiles globally...')
