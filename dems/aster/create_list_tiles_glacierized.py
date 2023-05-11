@@ -11,7 +11,7 @@ from misclib import SRTMGL1_naming_to_latlon, latlon_to_UTM
 
 def write_csv(list_tiles,list_area,list_tot,out_csv):
 
-    with open(out_csv, 'wb') as csvfile:
+    with open(out_csv, 'w') as csvfile:
         writer = csv.writer(csvfile, delimiter=',')
         writer.writerow(['Tile_name', 'UTM zone', 'Tot_area_intersecting [km2]', 'Tot_area_tile [km2]'])
 
